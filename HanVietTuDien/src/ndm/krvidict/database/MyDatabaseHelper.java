@@ -365,7 +365,7 @@ public class MyDatabaseHelper extends SQLiteAssetHelper {
 
 				String sqlex = "";
 				sqlex += "SELECT * FROM korvi_ex";
-				sqlex += " WHERE  kor_sen  like '" + word.objectName + "%'";
+				sqlex += " WHERE  vi_sen  like '" + word.objectName + "%'";
 
 				// execute the query
 				Cursor cursorex = db.rawQuery(sqlex, null);
