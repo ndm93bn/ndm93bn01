@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00a651"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/back"
+            android:textSize="20sp" 
+            android:onClick="backtomain"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#00a651"
+            android:layout_toRightOf="@+id/imageButton1"
+            android:text="Hàn Việt từ điển"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textStyle="bold" 
+             android:onClick="backtomain"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/vanban"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:minLines="3"
+        android:scrollHorizontally="false"
+        android:scrollbars="vertical"
+        android:textSize="18sp"
+        android:singleLine="false" 
+        android:hint="Nhập nội dung văn bản..."
+        android:background="@drawable/bg_edittext">
+        <requestFocus />
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <Button
+            android:id="@+id/btnHV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:background="#f1c40f"
+            android:padding="10dp"
+            android:text="Hàn - Việt"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnVH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+           android:layout_toLeftOf="@id/btnHV"
+            android:background="#00a651"
+            android:padding="10dp"
+             android:textSize="20sp"
+              android:textStyle="bold"
+            android:text="Việt - Hàn"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/vanban_nghia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.82" />
+
+</LinearLayout>

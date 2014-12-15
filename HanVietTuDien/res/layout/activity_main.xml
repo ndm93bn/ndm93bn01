@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+   <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    <ndm.krvidict.CustomAutoCompleteView
+        android:id="@+id/myautocomplete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#00a651"
+        android:completionThreshold="1"
+        android:hint="Nhập từ"
+        android:padding="10dp"
+        android:paddingLeft="52dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHighlight="#ebebeb"
+        android:textColorHint="#ccc"
+        android:textSize="25sp"
+        >
+    </ndm.krvidict.CustomAutoCompleteView>
+     <ImageButton
+        android:id="@+id/speech"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/microphone"
+        android:layout_centerVertical="true"
+        />
+    <ImageButton
+        android:id="@+id/translate"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_toLeftOf="@id/speech"
+        android:background="@drawable/translate"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        />
+    
+     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ke_ngang"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#007236"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="48dp"
+            android:padding="5dp"
+            android:textColor="#d35400"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/word_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/word"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/speaker"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_speaker" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#f1c40f"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/mean"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0px"
+        android:padding="0px" />
+
+</LinearLayout>
